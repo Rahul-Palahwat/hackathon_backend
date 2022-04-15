@@ -47,7 +47,8 @@ app.post('/signup',[
 
     // now we will check if user with this mail or phone is already present or not if not then we will save the user info 
     try {
-        // console.log("Hello")
+        console.log("Hello");
+        console.log(req.body);
         let user1= await User.findOne({email:req.body.email});
         let user2= await User.findOne({phone:req.body.phone});
         if(user1){
